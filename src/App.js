@@ -15,9 +15,7 @@ function App() {
             Simple calculator 
           </p>
         </header>
-        <div>
-          <input style={{ width: 250, height: 30, padding:5, fontSize:20 }} type='text' value={output} />
-        </div>
+        <OutputField value={output}/>
         <div style={{backgroundColor:'black', width:300, height:350}}>
         <div style={{ display: 'inline-block', flexDirection: 'column',position:'relative', paddingTop:5}}>
           <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}> <button style={{ width: 55, height: 55, color: 'ash', backgroundColor: 'ash', borderRadius: 50,fontSize:25,}} onClick={e => setOutput('')}> AC </button> </div>
@@ -33,11 +31,11 @@ function App() {
           <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}><button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'grey', borderRadius: 50,fontSize:30 }} value={2} onClick={e => setOutput(output + e.target.value)}>2</button></div>
         </div>
         <div style={{ display: 'inline-block', flexDirection: 'column', position:'relative',right:'40px' }}>
-          <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}> <button style={{ width: 55, height: 55, color: 'ash', backgroundColor: 'ash', borderRadius: 50,fontSize:30 }} value={null} onClick={e => setOutput(output + e.target.value)}> % </button> </div>
+          <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}> <button style={{ width: 55, height: 55, color: 'ash', backgroundColor: 'ash', borderRadius: 50,fontSize:30 }} value={'*1/100'} onClick={e => setOutput(output + e.target.value)}> % </button> </div>
           <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}><button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'grey', borderRadius: 50,fontSize:30 }} value={9} onClick={e => setOutput(output + e.target.value)}>9</button></div>
           <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}> <button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'grey', borderRadius: 50,fontSize:30 }} value={6} onClick={e => setOutput(output + e.target.value)}>6</button></div>
           <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}><button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'grey', borderRadius: 50,fontSize:30 }} value={3} onClick={e => setOutput(output + e.target.value)}>3</button></div>
-          <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}><button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'grey', borderRadius: 50,fontSize:30 }} value={null} onClick={e => setOutput(output + e.target.value)}>.</button></div>
+          <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}><button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'grey', borderRadius: 50,fontSize:30 }} value={'.'} onClick={e => setOutput(output + e.target.value)}>.</button></div>
         </div>
         <div style={{ display: 'inline-block', flexDirection: 'column', position:'relative',right:'30px' }}>
           <div style={{ paddingRight: 5, paddingTop: 5, paddingBottom: 5 }}> <button style={{ width: 55, height: 55, color: 'white', backgroundColor: 'orange', borderRadius: 50,fontSize:30 }} value={'/'} onClick={e => setOutput(output + e.target.value)}> / </button></div>
